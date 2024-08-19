@@ -1,4 +1,3 @@
-<script>
   let quizData = [
     {
       question: "What is the capital of Japan?",
@@ -204,4 +203,3 @@
     quizContainer.style.display = "block";
     createQuestion();
   });
-</script>
