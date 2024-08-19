@@ -1,80 +1,53 @@
   let quizData = [
     {
-      question: "What is the capital of Japan?",
-      options: ["Tokyo", "Beijing", "Seoul", "Bangkok"],
-      correct: "Tokyo",
+      question: "Manakah yang bukan huruf Ikhfa Haqiqi?",
+      options: ["Qaf", "Ain", "Shad", "Syin"],
+      correct: "Ain",
     },
     {
-      question: "Which planet is known as the 'Red Planet'?",
-      options: ["Mars", "Venus", "Jupiter", "Mercury"],
-      correct: "Mars",
+      question: "Manakah yang bukan huruf Izhar Qamari?",
+      options: ["Qaf", "Ain", "Ba", "Ta"],
+      correct: "Ta",
     },
     {
-      question:
-        "Which famous scientist developed the theory of general relativity?",
-      options: [
-        "Isaac Newton",
-        "Albert Einstein",
-        "Stephen Hawking",
-        "Galileo Galilei",
-      ],
-      correct: "Albert Einstein",
+      question: "Manakah hukum Mad yang tidak pernah dibaca 4 harakat?",
+      options: ["Lin", "Jaiz Munfashil", "Shilah Thawilah", "Farqi"],
+      correct: "Farqi",
     },
     {
-      question: "What is the largest mammal on Earth?",
-      options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
-      correct: "Blue Whale",
+      question: "Bacaan Saktah terdapat dalam surat, kecuali?",
+      options: ["al-Muthaffifin", "Yasin", "An-Nisa", "al-Kahf"],
+      correct: "An-Nisa",
     },
     {
-      question: "Which famous artist painted the Mona Lisa?",
-      options: [
-        "Vincent van Gogh",
-        "Pablo Picasso",
-        "Leonardo da Vinci",
-        "Michelangelo",
-      ],
-      correct: "Leonardo da Vinci",
+      question: "Huruf ro sukun waqaf didahului huruf isti'la sukun, yang sebelumnya terdapat kasrah dibaca?",
+      options: ["Tafkhim", "Tarqiq", "Tafkhim dan Tarqiq", "Tidak ada yang benar"],
+      correct: "Tafkhim dan Tarqiq",
     },
     {
-      question: "Which playwright wrote the tragedy 'Romeo and Juliet'?",
-      options: [
-        "William Shakespeare",
-        "George Bernard Shaw",
-        "Oscar Wilde",
-        "Charles Dickens",
-      ],
-      correct: "William Shakespeare",
+      question: "Hukum membaca basmalah di awal surat at-Taubah?",
+      options: ["Wajib", "Sunnah", "Boleh", "Tidak boleh"],
+      correct: "Tidak boleh",
     },
     {
-      question: "Who is known as the father of modern physics?",
-      options: [
-        "Isaac Newton",
-        "Albert Einstein",
-        "Galileo Galilei",
-        "Niels Bohr",
-      ],
-      correct: "Albert Einstein",
+      question: "Ada berapa huruf bacaan Idgham Syamsi?",
+      options: ["10", "14", "15", "6"],
+      correct: "14",
     },
     {
-      question:
-        "Which ancient wonder of the world was a massive statue of the Greek god Zeus?",
-      options: [
-        "Great Pyramid of Giza",
-        "Hanging Gardens of Babylon",
-        "Statue of Zeus at Olympia",
-        "Colossus of Rhodes",
-      ],
-      correct: "Statue of Zeus at Olympia",
+      question: "Berapa panjang hukum bacaan Mad Aridh Lissukun?",
+      options: ["2 harakat", "4 harakat", "6 harakat", "2/4/6 harakat"],
+      correct: "2/4/6 harakat",
     },
     {
-      question: "Who wrote the novel 'Pride and Prejudice'?",
-      options: [
-        "Emily Brontë",
-        "Charlotte Brontë",
-        "Jane Austen",
-        "Louisa May Alcott",
-      ],
-      correct: "Jane Austen",
+      question: "Bacaan langka atau khusus dalam ilmu Tajwid disebut?",
+      options: ["Gharib", "Saktah", "Lahn", "Tartil"],
+      correct: "Gharib",
+    },
+    {
+      question: "Nun sukun bertemu Nun dibaca?",
+      options: ["Izhar", "Idgham bighunnah", "Idgham bilaghunnah", "Ikhfa Haqiqi"],
+      correct: "Idgham bighunnah",
     },
   ];
 
@@ -88,7 +61,7 @@
 
   let questionNumber = 0;
   let score = 0;
-  const MAX_QUESTIONS = 5;
+  const MAX_QUESTIONS = 10;
   let timerInterval;
 
   const shuffleArray = (array) => {
@@ -174,8 +147,8 @@
     quizContainer.style.display = "none";
     quizResult.innerHTML = "";
 
-    const resultHeading = document.createElement("h2");
-    resultHeading.innerHTML = `Nilai Anda ${score} dari total ${MAX_QUESTIONS}.`;
+    const resultHeading = document.createElement("p");
+    resultHeading.innerHTML = `<h1 style="font-family: Roboto;">Tes Tajwid Instan</h1><p style="text-align: center">Terima kasih atas partisipasi Anda dalam tes tajwid cepat ini.<br /><br /> Untuk meningkatkan kualitas tes ini, kami mengharapkan saran dan masukan Anda dengan menuliskan di kolom komentar. Terima kasih. <br /><br /><br />Nilai Anda adalah<br /><br /><br /><span style="font-size:100px"> ${score} </span><br /> dari total ${MAX_QUESTIONS}.</p>`;
     quizResult.appendChild(resultHeading);
 
 
