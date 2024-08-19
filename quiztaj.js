@@ -61,7 +61,7 @@
 
   let questionNumber = 0;
   let score = 0;
-  const MAX_QUESTIONS = 10;
+  const MAX_QUESTIONS = 9;
   let timerInterval;
 
   const shuffleArray = (array) => {
